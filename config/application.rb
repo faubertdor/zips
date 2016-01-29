@@ -16,6 +16,12 @@ module Zips
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    # bootstrap mongoid within applications
+    Mongoid.load!('./config/mongoid.yml')
+
+    # which default ORM are we using with scaffold
+    config.generators { |g| g.orm :active_record }
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
