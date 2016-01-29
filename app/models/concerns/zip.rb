@@ -109,19 +109,19 @@ class Zip
 
   def self.paginate(params)
     Rails.logger.debug("paginate(#{params})")
+    sort = params[:sort] ||= {}
     page=(params[:page] ||= 1).to_i
     limit=(params[:per_page] ||= 30).to_i
     offset=(page-1)*limit
     #get the associated page of Zips -- eagerly convert doc to Zip
     zips=[]
-    all({}, {}, offset, limit).each do |doc|
+    all(params, sort, offset, limit).each do |doc|
       zips << Zip.new(doc)
     end
     #get a count of all documents in the collection
-    total=all({}, {}, 0, 1).count
+    total=all(params, sort, 0, 1).count
     WillPaginate::Collection.create(page, limit, total) do |pager|
-    pager.replace(zips)
-end
-end
-
+      pager.replace(zips)
+    end
+  end
 end
