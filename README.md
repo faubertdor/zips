@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of Rails application presented on Coursera that uses MongoDB. This particular example is hosted on Heroku and uses MongoLab to host the database.
+
+Link: https://coursera-zips-jfdorancy.herokuapp.com/
 
 Things you may want to cover:
 
 * Ruby version
+	Version by default on Heroku.
 
 * System dependencies
+	Use the gem mongoid to integrate Rails with MongoDB and the will_paginate gem for paging.
 
-* Configuration
+	Mongo Rails driver: https://github.com/mongodb/mongoid
+	Paging:             https://github.com/mislav/will_paginate
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Database
+	This app uses NoSQL database MongoDB hosted on MongoLab.
