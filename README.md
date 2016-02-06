@@ -1,8 +1,8 @@
 == README
 
-This is an example of Rails application presented on Coursera that uses MongoDB. This particular example is hosted on Heroku and uses MongoLab to host the database.
+This is an example of Rails application that uses MongoDB. This particular example is hosted on Heroku and uses MongoLab to host the database.
 
-Link: https://coursera-zips-jfdorancy.herokuapp.com/
+Link: https://zips-jfdorancy.herokuapp.com/
 
 Things you may want to cover:
 
